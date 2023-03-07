@@ -4,6 +4,8 @@
         "types.h": "c",
         "user.h": "c",
         "proc.h": "c",
-        "stdarg.h": "c"
+        "stdarg.h": "c",
+        "fs.h": "c",
+        "fcntl.h": "c"
     }
 }
