@@ -1,10 +1,6 @@
 #include "kernel/types.h"
 #include "user/user.h"
 #define MAXSIZE 35
-// typedef struct figure{
-//     int num; //数字
-//     int flag; //标志是否被筛掉
-// }figure;
 void 
 primeSieve(int a[],int length)
 {
@@ -15,7 +11,7 @@ primeSieve(int a[],int length)
     pipe(p);
     int count = 0;//本轮筛进下一轮的个数
     // close(0);
-    fprintf(1,"primer %d\n",a[0]);
+    fprintf(1,"prime %d\n",a[0]);
 
 
     for(int i = 1;i<length;i++)
@@ -49,7 +45,7 @@ primeSieve(int a[],int length)
 
 
     // fprintf(1,"    %d %d\n",count,getpid());
-    
+
     close(p[0]);
     free(a);
     wait((int*)0);

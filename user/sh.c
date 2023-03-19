@@ -263,6 +263,8 @@ backcmd(struct cmd *subcmd)
 char whitespace[] = " \t\r\n\v";
 char symbols[] = "<|>&;()";
 
+
+// >> 代表追加写
 int
 gettoken(char **ps, char *es, char **q, char **eq)
 {

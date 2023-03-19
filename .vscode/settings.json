@@ -6,6 +6,11 @@
         "proc.h": "c",
         "stdarg.h": "c",
         "fs.h": "c",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "cmath": "c",
+        "type_traits": "c",
+        "limits": "c",
+        "typeinfo": "c",
+        "param.h": "c"
     }
 }
