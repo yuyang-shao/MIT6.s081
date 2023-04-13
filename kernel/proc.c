@@ -291,6 +291,10 @@ fork(void)
 
   safestrcpy(np->name, p->name, sizeof(p->name));
 
+  //copy father trace mask
+
+  for(i = 0; i < 32; i++)
+    np->tmask[i] = p->tmask[i];
   pid = np->pid;
 
   np->state = RUNNABLE;
@@ -692,4 +696,23 @@ procdump(void)
     printf("%d %s %s", p->pid, state, p->name);
     printf("\n");
   }
+}
+
+
+int
+procNum()
+{
+  int num = 0;
+  struct proc *p;
+
+  for(p = proc; p < &proc[NPROC]; p++){
+    acquire(&p->lock);
+    if(p->state == UNUSED){
+
+    }else{
+      num++;
+    }
+    release(&p->lock);
+  }
+  return num;
 }
